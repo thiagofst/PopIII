@@ -1,0 +1,3 @@
+#./rn_nomodfiles   inlist01_header
+#./re_nomodfiles . inlist02_header
+./re_nomodfiles [] inlist03_header
