@@ -1,0 +1,73 @@
+
+&star_job
+
+      show_log_description_at_start = .false.
+
+      create_pre_main_sequence_model = .true.
+
+      save_model_when_terminate = .true.
+      save_model_filename = 'start.mod'
+      required_termination_code_string = 'log_L_lower_limit'
+
+      history_columns_file = 'history_columns.list'
+      profile_columns_file = 'profile_columns.list'
+      
+      change_initial_net = .true.
+      new_net_name = 'mesa_30.net'
+      dump_missing_metals_into_heaviest = .true.
+
+      pgstar_flag = .true.
+      
+/
+
+&eos
+      use_Skye = .true.
+      use_PC = .false.
+
+/
+
+&kap
+      Zbase = 1d-3
+
+      kap_file_prefix = 'gs98'
+      use_Type2_opacities = .true.
+
+/
+
+&controls
+
+      ! Stop when the luminosity has decreased to 10 Lsun
+      log_L_lower_limit = 1
+
+      initial_mass = 1
+      initial_z = 1d-3
+      initial_y = 0.2423
+      
+      varcontrol_target = 1d-3
+      time_delta_coeff = 0.8
+
+      use_gold2_tolerances = .true.
+      
+      write_pulse_data_with_profile = .true.
+      add_atmosphere_to_pulse_data = .true.
+      pulse_data_format = 'GYRE'
+      keep_surface_point_for_pulse_data = .true.
+      interpolate_rho_for_pulse_data = .true.
+      add_center_point_to_pulse_data = .true.
+
+      photo_interval         = 200
+      photo_digits           = 8
+      profile_interval       = 100 
+      max_num_profile_models = 400000
+      history_interval       = 1
+      write_header_frequency = 10
+      terminal_interval      = 10
+
+
+/
+
+&pgstar
+
+    Grid1_title = '(01) Pre-main sequence'
+   
+/

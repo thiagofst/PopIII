@@ -1,0 +1,98 @@
+
+&star_job
+
+      show_log_description_at_start = .false.
+
+      load_saved_model = .true.
+      load_model_filename = 'end_core_h_burn.mod'
+
+      save_model_when_terminate = .true.
+      save_model_filename = 'start_he_core_flash.mod'
+      required_termination_code_string = 'power_he_burn_upper_limit'
+
+      history_columns_file = 'history_columns.list'
+      profile_columns_file = 'profile_columns.list'
+
+      change_initial_net = .true.
+      new_net_name = 'mesa_30.net'
+      dump_missing_metals_into_heaviest = .true.
+
+      change_D_omega_flag = .true.
+      new_D_omega_flag = .true.
+
+      pgstar_flag = .true.
+
+/
+
+&eos
+      use_Skye = .true.
+      use_PC = .false.
+/
+
+&kap
+      Zbase = 1d-3
+
+      kap_file_prefix = 'gs98'
+      use_Type2_opacities = .true.
+
+/
+
+&controls
+
+      power_he_burn_upper_limit = 10d0
+
+      energy_eqn_option = 'eps_grav'
+      use_gold2_tolerances = .true.
+
+      num_trace_history_values = 2
+      trace_history_value_name(1) = 'rel_E_err'
+      trace_history_value_name(2) = 'log_rel_run_E_err'
+
+      initial_mass = 1
+      initial_z = 1d-3
+      initial_y = 0.2423
+
+      am_nu_visc_factor = 0
+      am_D_mix_factor = 0.0333333333333333d0
+      D_DSI_factor = 0
+      D_SH_factor = 1
+      D_SSI_factor = 1
+      D_ES_factor = 1
+      D_GSF_factor = 1
+      D_ST_factor = 1
+      
+      varcontrol_target = 1d-3
+      delta_lgL_He_limit = 0.01d0
+      time_delta_coeff = 0.8
+     
+      cool_wind_full_on_T = 9.99d9
+      hot_wind_full_on_T = 1d10 
+      cool_wind_RGB_scheme = 'Reimers'
+      cool_wind_AGB_scheme = 'Blocker'
+      RGB_to_AGB_wind_switch = 1d-4
+      Reimers_scaling_factor = 0.4d0  
+      Blocker_scaling_factor = 0.7d0 ! 0.8d0        
+
+      photo_interval         = 200
+      photo_digits           = 8
+      profile_interval       = 10
+      max_num_profile_models = 400000
+      history_interval       = 1
+      write_header_frequency = 10
+      terminal_interval      = 10
+      
+      write_pulse_data_with_profile = .true.
+      add_atmosphere_to_pulse_data = .true.
+      pulse_data_format = 'GYRE'
+      keep_surface_point_for_pulse_data = .true.
+      interpolate_rho_for_pulse_data = .true.
+      add_center_point_to_pulse_data = .true.
+
+
+/
+
+&pgstar
+
+    Grid1_title = '(03) Until the onset of core He ignition'
+
+/
