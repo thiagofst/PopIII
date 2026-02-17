@@ -1,3 +1,1 @@
-MESA `inlists` used in two papers by **Ferreira, T., Bellinger, E. P., Farag, E., and Lindsay, C. J.**, both submitted to the AAS Journals (December 2025):
-1. *Evolution of Low-Mass Population III Stars: Convection, Mass Loss, Nucleosynthesis, and Neutrinos*  
-2. *Red-Giant Asteroseismology of Low-Mass Population III Stars*
+MESA `inlists` for modelling Population III stars in "Evolution of Low-Mass Population III Stars: Convection, Mass Loss, Nucleosynthesis, and Neutrinos" and "Red-Giant Asteroseismology of Low-Mass Population III Stars" by Ferreira et al. (2026, submitted to AAS Journals) | MESA version r24.08.1 and MESA SDK version 24.7.1.
