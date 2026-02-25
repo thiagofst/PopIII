@@ -1,4 +1,4 @@
-MESA and GYRE `inlists` for modelling Population III stars in "Evolution of Low-Mass Population III Stars: Convection, Mass Loss, Nucleosynthesis, and Neutrinos" (Paper I) and "Red-Giant Asteroseismology of Low-Mass Population III Stars" (Paper II) by Ferreira et al. (2026, submitted to AAS Journals) | MESA version r24.08.1, MESA SDK version 24.7.1, and GYRE version 7.1.
+MESA and GYRE `inlists` for modelling Population III stars in "Evolution of Low-Mass Population III Stars: Convection, Mass Loss, Nucleosynthesis, and Neutrinos" (Paper I; [arXiv:2602.16082](https://arxiv.org/abs/2602.16082)) and "Red-Giant Asteroseismology of Low-Mass Population III Stars" (Paper II) by Ferreira et al. (2026, submitted to AAS Journals) | MESA version r24.08.1, MESA SDK version 24.7.1, and GYRE version 7.1.
 
 Notes:
 
